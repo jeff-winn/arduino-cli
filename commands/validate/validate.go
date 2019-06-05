@@ -19,6 +19,7 @@ package validate
 
 import (
 	"fmt"
+	"github.com/arduino/arduino-cli/global"
 	"os"
 	"path/filepath"
 	"strings"
@@ -36,7 +37,7 @@ func InitCommand() *cobra.Command {
 		Use:     "validate",
 		Short:   "Validates Arduino installation.",
 		Long:    "Checks installed cores and tools for corruption.",
-		Example: "  " + cli.AppName + " validate",
+		Example: "  " + global.GetAppName() + " validate",
 		Args:    cobra.NoArgs,
 		Run:     run,
 	}

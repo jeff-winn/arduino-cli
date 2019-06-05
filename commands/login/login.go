@@ -19,6 +19,7 @@ package login
 
 import (
 	"fmt"
+	"github.com/arduino/arduino-cli/global"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -42,9 +43,9 @@ func InitCommand() *cobra.Command {
 		Short: "Creates default credentials for an Arduino Create Session.",
 		Long:  "Creates default credentials for an Arduino Create Session.",
 		Example: "" +
-			"  " + cli.AppName + " login                          # Asks for all credentials.\n" +
-			"  " + cli.AppName + " login myUser MySecretPassword  # Provide all credentials.\n" +
-			"  " + cli.AppName + " login myUser                   # Asks for just the password instead of having it in clear.",
+			"  " + global.GetAppName() + " login                          # Asks for all credentials.\n" +
+			"  " + global.GetAppName() + " login myUser MySecretPassword  # Provide all credentials.\n" +
+			"  " + global.GetAppName() + " login myUser                   # Asks for just the password instead of having it in clear.",
 		Args: cobra.RangeArgs(0, 2),
 		Run:  run,
 	}

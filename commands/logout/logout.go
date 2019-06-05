@@ -18,6 +18,7 @@
 package logout
 
 import (
+	"github.com/arduino/arduino-cli/global"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -36,7 +37,7 @@ func InitCommand() *cobra.Command {
 		Use:     "logout",
 		Short:   "Clears credentials for the Arduino Create Session.",
 		Long:    "Clears credentials for the Arduino Create Session.",
-		Example: "  " + cli.AppName + " logout",
+		Example: "  " + global.GetAppName() + " logout",
 		Args:    cobra.NoArgs,
 		Run:     run,
 	}
