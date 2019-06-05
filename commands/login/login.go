@@ -19,7 +19,6 @@ package login
 
 import (
 	"fmt"
-	"github.com/arduino/arduino-cli/global"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -29,6 +28,7 @@ import (
 	"github.com/arduino/arduino-cli/auth"
 	"github.com/arduino/arduino-cli/cli"
 	"github.com/arduino/arduino-cli/common/formatter"
+	"github.com/arduino/arduino-cli/global"
 	"github.com/bgentry/go-netrc/netrc"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/sirupsen/logrus"
